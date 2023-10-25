@@ -1,0 +1,9 @@
+.closeIcon {
+    &:hover {
+        svg {
+            path {
+                stroke: #ffffff;
+            }
+        }
+    }
+}

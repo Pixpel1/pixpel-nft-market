@@ -1,0 +1,84 @@
+@import "./scss/variebles";
+.banner {
+    padding: 80px 100px;
+    border-radius: 30px;
+    &__title {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 90px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        @media screen and (max-width: 600px) {
+            font-size: 24px;
+            line-height: normal;
+        }
+        @media screen and (min-width: 600px) {
+            font-size: 36px;
+            line-height: normal;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 60px;
+            line-height: 90px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #717a8b;
+        max-width: 683px;
+        margin-bottom: 50px;
+    }
+
+    &__input {
+        width: 380px;
+        padding: 25px 0 25px 30px;
+        margin-right: 30px;
+        border: 2px solid $color-dark-100;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        border-radius: 10px;
+        background-color: transparent;
+        color: $color-gray;
+        &::placeholder {
+            color: $color-gray;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            padding: 10px 15px 10px 15px;
+            margin-right: 0px;
+            font-size: 12px;
+            line-height: normal;
+        }
+    }
+    &__btn {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: $color-black;
+        padding: 25px 100px;
+    }
+    &__form {
+        margin-bottom: 60px;
+        @media screen and (max-width: 600px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__card {
+    }
+    &__card-title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 5px;
+    }
+    &__card-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &--offset-bottom {
+        margin-bottom: 60px;
+    }
+}

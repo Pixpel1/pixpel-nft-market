@@ -1,0 +1,117 @@
+.shoppingTabs {
+    font-family: "Poppins", sans-serif;
+
+    .ant-tabs-nav {
+        margin-bottom: 0;
+        &::before {
+            content: unset !important;
+        }
+        .ant-tabs-nav-wrap {
+            overflow: unset;
+        }
+        .ant-tabs-nav-list {
+            position: relative;
+
+            .ant-tabs-tab {
+                font-size: 24px;
+                @media screen and (max-width: 800px) {
+                    font-size: 20px;
+                }
+                @media screen and (max-width: 680px) {
+                    font-size: 18px;
+                }
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 4px 4px 0 0;
+                border: unset;
+                margin-right: 2px;
+                background-color: $color-dark-300;
+                border: 1px solid transparent;
+                &.ant-tabs-tab-active {
+                    background-color: $color-blue;
+                    .ant-tabs-tab-btn {
+                        color: $color-white !important;
+                    }
+                    &:hover {
+                        .ant-tabs-tab-btn {
+                            color: $color-white;
+                        }
+                        &::before {
+                            content: unset;
+                        }
+                    }
+                }
+                &.ant-tabs-tab-disabled {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+                &:not(.ant-tabs-tab-disabled, .ant-tabs-tab-active):hover {
+                    border-color: $color-blue;
+                    .ant-tabs-tab-btn {
+                        color: $color-blue;
+                    }
+                    &::before {
+                        content: "";
+                        width: 90%;
+                        height: 4px;
+                        background-color: $color-blue;
+                        position: absolute;
+                        top: -5px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+    &.add_list_item {
+        .ant-tabs-nav {
+            .ant-tabs-nav-list {
+                .ant-tabs-tab {
+                    &:nth-of-type(5) {
+                        &:hover {
+                            border-color: $color-yellow;
+                            &::before {
+                                background-color: $color-yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.inventoryTabs {
+        position: relative;
+        .ant-tabs-nav {
+            margin-left: auto;
+        }
+        .ant-tabs-content {
+            height: 90%;
+            overflow: hidden scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: $scroll-bg $color-blue;
+            &::-webkit-scrollbar {
+                width: 20px;
+                border-width: 5px;
+            }
+
+            &::-webkit-scrollbar-track-piece {
+                background-color: $color-dark-200;
+                border-color: $color-dark-300;
+                border-width: 2px 7px 2px 7px;
+                border-style: solid;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: $color-blue;
+                border-color: $color-dark-300;
+                border-style: solid;
+                border-width: 1px 6px 1px 6px;
+                border-radius: 9px;
+            }
+        }
+    }
+}

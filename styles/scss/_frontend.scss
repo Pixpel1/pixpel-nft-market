@@ -1,0 +1,81 @@
+@import "variables";
+.banner-bg {
+    background-image: url("../../src/launchpad/assets/background/homeBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 56px;
+}
+.ant-input-prefix svg {
+    fill: rgb(125, 125, 125);
+}
+
+.svgColor {
+    &.success {
+        path {
+            color: $success_check;
+        }
+    }
+    path {
+        color: $site_red;
+    }
+}
+.fundingProgress {
+    position: relative;
+    .ant-progress-outer {
+        margin-inline-end: 0 !important;
+        padding-inline-end: 0 !important;
+        .ant-progress-inner {
+            background-color: $bg_color_gray;
+            .ant-progress-bg {
+                background-color: #0095c8;
+            }
+        }
+    }
+    .ant-progress-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 5px;
+        font-size: 12px;
+        color: white;
+    }
+}
+
+#step3 {
+    input {
+        &::placeholder {
+            color: #717a8b;
+        }
+    }
+}
+.ant-message-notice-content {
+    background-color: #37404c !important;
+}
+
+.buy-pixp-tokens {
+    .ant-form-item-has-error {
+        border: 1px solid #ff4d4f;
+    }
+    .ant-input-number {
+        .ant-input-number-input {
+            min-width: 280px;
+            color: white;
+        }
+        &:focus {
+            border: unset;
+        }
+    }
+    #pixp_amount_help {
+        position: absolute;
+        text-align: center;
+        left: 20px;
+        min-width: 300px;
+        display: none;
+        div {
+            font-size: 14px;
+            font-weight: 600;
+            color: #717a8b;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.cartIcon {
+    transition: 0.5s ease-in-out all !important;
+    &:hover {
+        transition: all ease-in 0.5s !important;
+        width: 180px !important;
+        background-color: #0095c8 !important;
+        span {
+            transition: all ease-in 0.5s;
+            font-size: 16px;
+        }
+    }
+    span {
+        font-size: 0;
+        transition: 0.3s ease-in-out all;
+    }
+}

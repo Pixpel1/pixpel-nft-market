@@ -1,0 +1,204 @@
+@import "./DropDownStyles.scss";
+@import "./HeaderStyles.scss";
+@import "./Rocket.scss";
+@import "./stickyRocket.scss";
+@import "./rocketSingle.scss";
+@import "./vest.scss";
+@import "./customCheckbox.scss";
+.closeIcon {
+    &:hover {
+        svg {
+            path {
+                stroke: #ffffff;
+            }
+        }
+    }
+}
+
+.nft_set_form {
+    .ant-form-item-label {
+        label {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
+    }
+    .ant-form-item-control-input-content {
+        input,
+        textarea {
+            background-color: $color-dark-200;
+            border-color: $color-dark-200;
+            color: white;
+            resize: none;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            padding: 12px 16px;
+            &::placeholder {
+                color: $color-gray;
+            }
+        }
+    }
+}
+
+.custom-datepicker {
+    &.ant-picker-status-error {
+        background-color: $color-dark-200 !important;
+        border: 1px solid #ff4d4f;
+    }
+    .ant-picker-input {
+        input {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            &::placeholder {
+                color: $color-gray;
+            }
+        }
+        .ant-picker-suffix {
+            background-color: $color-dark-300 !important;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            pointer-events: auto;
+            &:hover {
+                background-color: $color-blue !important;
+            }
+        }
+        .ant-picker-clear {
+            font-size: 30px;
+            background: $color-dark-300;
+        }
+    }
+}
+.datepicker-popup {
+    .ant-picker-panel-container {
+        background: unset;
+    }
+    &.ant-picker-dropdown.datepicker-popup {
+        .ant-picker-panel-container {
+            background: $color-dark-200;
+        }
+        .ant-picker-header {
+            align-items: center;
+
+            .ant-picker-header-super-prev-btn,
+            .ant-picker-header-super-next-btn {
+                display: none;
+            }
+            .ant-picker-header-prev-btn,
+            .ant-picker-header-next-btn {
+                background-color: $color-blue-detail;
+                border-radius: 100%;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .ant-picker-body {
+            thead {
+                th {
+                    color: $color-blue-detail;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+            }
+            .ant-picker-cell-disabled {
+                opacity: 0.5;
+            }
+            .ant-picker-cell-selected {
+                .ant-picker-cell-inner {
+                    background-color: $color-blue-detail;
+                }
+            }
+            .ant-picker-cell-today {
+                .ant-picker-cell-inner {
+                    &::before {
+                        border: 1px solid $color-blue-detail !important;
+                    }
+                }
+            }
+        }
+        .ant-picker-time-panel {
+            .ant-picker-time-panel-cell {
+                .ant-picker-time-panel-cell-inner {
+                    color: white;
+                }
+                &.ant-picker-time-panel-cell-selected {
+                    .ant-picker-time-panel-cell-inner {
+                        background-color: $color-blue-detail;
+                    }
+                }
+            }
+        }
+        .ant-picker-footer {
+            .ant-btn-primary {
+                background-color: $color-blue-detail;
+            }
+        }
+    }
+}
+
+// .create_nft_list {
+//     top: 270px !important;
+// }
+
+.slick-slider {
+    .slick-arrow {
+        opacity: 0;
+        transition: ease-out 0.5s all;
+    }
+}
+.slick-slider {
+    &:hover {
+        .slick-arrow {
+            opacity: 1;
+            transition: ease-in 0.5s all;
+        }
+    }
+}
+.slick-slider {
+    .slick-prev {
+        left: -40px;
+    }
+}
+
+.featuredImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        background-color: rgba($color: #1ff19f, $alpha: 0);
+        border-radius: 50%;
+        transition: 300ms ease-out;
+    }
+    &:hover {
+        &::before {
+            background-color: rgba($color: #1ff19f, $alpha: 0.84);
+            transition: 300ms linear;
+            width: 150%;
+            height: 150%;
+        }
+        .featuredHeading {
+            opacity: 1;
+            transition: 300ms linear;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.41);
+        }
+    }
+    .featuredHeading {
+        opacity: 0;
+        transition: 300ms ease-out;
+    }
+}
+
+
+.testing{
+    margin-bottom: 10px;
+}

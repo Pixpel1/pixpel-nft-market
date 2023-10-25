@@ -1,0 +1,14 @@
+.InputDatePicker {
+  color: white !important;
+}
+.InputDatePickerPopup {
+  .ant-picker-panel {
+    background-color: #37404c !important;
+    .ant-picker-cell {
+      color: white;
+    }
+    .ant-picker-content {
+      color: white;
+    }
+  }
+}

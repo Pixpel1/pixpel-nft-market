@@ -1,0 +1,48 @@
+$tab-bg-active: #0095c8;
+.projectTabs {
+    .ant-tabs-nav {
+        margin-bottom: 0;
+        &::before {
+            content: unset;
+        }
+        .ant-tabs-nav-list {
+            .ant-tabs-tab {
+                font-size: 24px;
+                @media screen and (max-width: 800px) {
+                    font-size: 20px;
+                }
+                @media screen and (max-width: 680px) {
+                    font-size: 18px;
+                }
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 4px 4px 0 0;
+                border: unset;
+                margin-right: 2px;
+                background-color: #29313c;
+                border-top: 2px solid transparent;
+                &.ant-tabs-tab-active {
+                    background-color: $tab-bg-active;
+                    .ant-tabs-tab-btn {
+                        color: #fff !important;
+                    }
+                    &:hover {
+                        .ant-tabs-tab-btn {
+                            color: #fff;
+                        }
+                    }
+                }
+                &.ant-tabs-tab-disabled {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+                &:not(.ant-tabs-tab-disabled):hover {
+                    border-top: 2px solid $tab-bg-active;
+                    .ant-tabs-tab-btn {
+                        color: $tab-bg-active;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,179 @@
+.cart {
+    position: sticky;
+    z-index: 0;
+    top: 20px;
+    right: 16px;
+    border-radius: 10px;
+    &__body {
+        padding: 30px 20px;
+        display: flex;
+        min-height: 600px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+    &__list &__item:not(:last-child) {
+        margin-bottom: 7px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content {
+        flex: 1 1 0;
+        margin-left: 15px;
+    }
+    &__content-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
+    &__content-price {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0095c8;
+    }
+    &__img {
+        width: 60px;
+        height: 63px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+    &__delete {
+        background: #48515f;
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: #717a8b;
+            svg {
+                path {
+                    stroke: #ffffff;
+                }
+            }
+        }
+    }
+    &__footer-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        margin-top: 15px;
+        background: #2ebd85;
+        border-radius: 5px;
+        width: 100%;
+        padding: 22px 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #ffffff;
+    }
+}
+.custom-cart-animation {
+    width: 64px;
+    animation-name: myhoverout;
+    animation-duration: 0.6s;
+    &.hoverClass {
+        animation-name: myhover;
+        animation-duration: 0.6s;
+        width: 180px;
+    }
+}
+@keyframes myhover {
+    0% {
+        width: 64px;
+    }
+
+    80% {
+        width: 190px;
+    }
+    100% {
+        width: 180px;
+    }
+}
+
+@keyframes myhoverout {
+    0% {
+        width: 180px;
+    }
+
+    80% {
+        width: 54px;
+    }
+    100% {
+        width: 64px;
+    }
+}
+// .custom-cart-animation {
+//     width: 64px;
+//     transition: width 0.5s;
+//     &:hover {
+//         width: 180px;
+//         transition: width 150ms;
+//         animation: myAnim 0.5s ease-out 0.3s 1 alternate none;
+//     }
+// }
+// @keyframes myAnim {
+//     0% {
+//         animation-timing-function: ease-in;
+//         opacity: 1;
+//         // transform: translateX(48px);
+//         width: 180px;
+//     }
+
+//     24% {
+//         opacity: 1;
+//     }
+
+//     40% {
+//         animation-timing-function: ease-in;
+//         animation-duration: 150ms;
+//         // width: 110px;
+//     }
+
+//     // 65% {
+//     //     animation-timing-function: ease-in;
+//     //     width: 80px;
+//     // }
+
+//     82% {
+//         animation-timing-function: ease-in;
+//         animation-duration: 150ms;
+//         width: 170px;
+//     }
+
+//     93% {
+//         animation-timing-function: ease-in;
+//         animation-duration: 150ms;
+//         width: 170px;
+//     }
+
+//     // 25%,
+//     // 55%,
+//     // 75%,
+//     // 87%,
+//     // 98% {
+//     //     animation-timing-function: ease-out;
+//     //     width: 170px;
+//     // }
+
+//     100% {
+//         animation-timing-function: ease-out;
+//         opacity: 1;
+//         width: 180px;
+//     }
+// }

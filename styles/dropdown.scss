@@ -1,0 +1,14 @@
+.token-dropdown {
+    .ant-dropdown-menu {
+        background-color: #29313c;
+        padding-left: 0;
+        padding-right: 0;
+        .ant-dropdown-menu-item {
+            padding: 10px 12px;
+        }
+        .ant-dropdown-menu-item-divider {
+            background: #717a8b;
+            height: 2px;
+        }
+    }
+}
